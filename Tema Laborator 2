@@ -1,0 +1,42 @@
+const int pinLED0 = 11;
+const int pinLED1 = 10;
+const int pinLED2 = 9;
+
+const int pinPOT0 = A0;
+const int pinPOT1 = A1;
+const int pinPOT2 = A2;
+
+int valuePOT0 = 0, valuePOT1 = 0, valuePOT2 = 0;
+int mappedValuePOT0 = 0, mappedValuePOT1 = 0, mappedValuePOT2 = 0;
+
+void setup() {
+  pinMode(pinLED0, OUTPUT);
+  pinMode(pinLED1, OUTPUT);
+  pinMode(pinLED2, OUTPUT);
+  pinMode(pinPOT0, INPUT);
+  pinMode(pinPOT1, INPUT);
+  pinMode(pinPOT2, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  valuePOT0 = analogRead(pinPOT0);
+  mappedValuePOT0 = map(valuePOT0, 0, 1023, 0, 255);
+  analogWrite(pinLED0, mappedValuePOT0);
+  
+  valuePOT1 = analogRead(pinPOT1);
+  mappedValuePOT1 = map(valuePOT1, 0, 1023, 0, 255);
+  analogWrite(pinLED1, mappedValuePOT1);
+  
+  valuePOT2 = analogRead(pinPOT2);
+  mappedValuePOT2 = map(valuePOT2, 0, 1023, 0, 255);
+  analogWrite(pinLED2, mappedValuePOT2);
+
+  Serial.print("R:");
+  Serial.print(mappedValuePOT0);
+  Serial.print(" G:");
+  Serial.print(mappedValuePOT1);
+  Serial.print(" B:");
+  Serial.print(mappedValuePOT2);
+  Serial.println();
+}
