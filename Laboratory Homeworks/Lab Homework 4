@@ -1,0 +1,241 @@
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
+const int pinSW = 10;
+const int pinX = A0;
+const int pinY = A1;
+int switchValue = 0;
+int xValue = 0;
+int yValue = 0;
+int select = 0;
+int sw = 1;
+int sw1 = 1;
+int pressed = 0;
+int level = 0;
+int prevLevel = 0;
+int score = 0;
+int highScore = 0;
+int lives = 3;
+bool endGame = 0;
+char player[20];
+char inChar;
+byte index = 0;
+bool name_introduced = 0;
+
+void setup() {
+   lcd.begin(16, 2);
+   pinMode(9, OUTPUT);
+   analogWrite(9, 120);
+   Serial.begin(9600);
+   pinMode(pinSW, INPUT_PULLUP);
+}
+
+void show_menu(){
+  lcd.setCursor(2, 0);
+  lcd.print("Start");
+  lcd.setCursor(9, 0);  
+  lcd.print("Setup");
+  lcd.setCursor(3, 1);
+  lcd.print("HighScore");
+}
+
+int joyStickX(int i, int maxNr){
+  if(xValue < 50 && sw == 1){
+    i++;
+    sw = 0;
+    i = i % maxNr;
+  }
+  
+  if(xValue >950 && sw == 1){
+    if(i == 0) 
+      i = maxNr - 1;
+    else
+      i--;
+    sw = 0;
+    i = i % maxNr;
+  }
+
+  if(xValue > 500 && xValue < 600)
+    sw = 1;
+  return i;
+}
+
+void loop() {
+
+  show_menu();
+
+  switchValue = !digitalRead(pinSW);
+  xValue = analogRead(pinX);
+
+  select = joyStickX(select, 3);
+
+  if (select == 0){
+    lcd.setCursor(8, 0);
+    lcd.print(" ");
+    lcd.setCursor(2, 1);
+    lcd.print(" ");
+    lcd.setCursor(1, 0);
+    if(millis() % 750 > 325)
+      lcd.print(">");
+    else
+      lcd.print(" ");
+  }
+  else if (select == 1){
+    lcd.setCursor(1, 0);
+    lcd.print(" ");
+    lcd.setCursor(2, 1);
+    lcd.print(" ");
+    lcd.setCursor(8, 0);
+    if(millis() % 750 > 325)
+      lcd.print(">");
+    else
+      lcd.print(" ");
+  }
+  else{
+    lcd.setCursor(8, 0);
+    lcd.print(" ");
+    lcd.setCursor(1, 0);
+    lcd.print(" ");
+    lcd.setCursor(2, 1);
+    if(millis() % 750 > 325)
+      lcd.print(">");
+    else
+      lcd.print(" ");
+  }
+
+  if (switchValue == 1 && sw1 == 1){
+      if (pressed == 1)
+        pressed = 0;
+      else
+        pressed = 1;
+      sw1 = 0;
+  }
+  if (switchValue == 0)
+    sw1 = 1;
+
+  while(Serial.available() > 1){      
+      if(index < 19)
+      {
+          inChar = Serial.read();
+          player[index] = inChar;
+          index++;
+      }
+      name_introduced = 1;
+  }
+
+  long timer = millis();
+  
+//************************************* START *************************************\\
+    
+  while (pressed == 1 && select == 0){
+    yValue = analogRead(pinY);
+    score = level * 3;
+    
+    if(millis() > timer && millis() < timer + 50)
+      lcd.clear();
+      
+    if(millis() % 3000 > 1500 && prevLevel == level)
+      level++;
+      
+    else if(millis() % 3000 < 1500)
+      prevLevel = level;
+    lcd.setCursor(0, 0);
+    lcd.print("Lives: ");
+    lcd.print(lives);
+
+    lcd.setCursor(9, 0);
+    lcd.print("Lvl: ");
+    lcd.print(level);
+
+    lcd.setCursor(0, 1);
+    lcd.print("Score: ");
+    lcd.print(score);
+
+    while(millis() > timer + 5000 && pressed == 1)
+    {
+      switchValue = !digitalRead(pinSW);
+      lcd.setCursor(0, 0);
+      lcd.print("Congratulations!");
+      lcd.setCursor(0, 1);
+      lcd.print(" You finished!");
+      if(switchValue == 1){
+        lcd.clear();
+        pressed = 0;
+      }
+      endGame = 1;
+    }
+    
+    if (yValue > 800){
+      lcd.clear();
+      pressed = 0;
+    }
+  }
+
+  timer = millis();
+  
+//************************************* SETUP *************************************\\
+  
+  while (pressed == 1 && select == 1){
+    xValue = analogRead(pinX);
+    yValue = analogRead(pinY);
+
+    if(millis() > timer && millis() < timer + 50)
+      lcd.clear();
+    
+    lcd.setCursor(0, 0);
+    lcd.print("Player: ");
+    if(name_introduced == 0)
+      lcd.print("Anonymus");
+    else{
+      lcd.print(player);
+      lcd.print("            ");
+    }
+
+    lcd.setCursor(0, 1);
+    lcd.print("Starting lvl: ");
+
+    level = joyStickX(level, 10);
+    
+    lcd.print(level);
+    
+    if (yValue > 800){
+      lcd.clear();
+      pressed = 0;
+    }
+  }
+    
+//************************************* HIGHSCORE *************************************\\
+
+  timer = millis();
+  
+  while (pressed == 1 && select == 2){
+    yValue = analogRead(pinY);
+
+    if(millis() > timer && millis() < timer + 50)
+      lcd.clear();
+    
+    if(score > highScore && endGame == 1){
+      highScore = score;
+      endGame = 0;
+    }
+
+    lcd.setCursor(0, 0);
+    lcd.print("Player: ");
+    if(name_introduced == 0)
+      lcd.print("Anonymus");
+    else{
+      lcd.print(player);
+      lcd.print("            ");
+    }
+    
+    lcd.setCursor(0, 1);
+    lcd.print("HighScore: ");
+    lcd.print(highScore);
+  
+    if (yValue > 800){
+      lcd.clear();
+      pressed = 0;
+    }
+  }
+}
