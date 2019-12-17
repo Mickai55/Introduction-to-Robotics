@@ -6,13 +6,13 @@
 **Gameplay**: https://drive.google.com/open?id=1pfVTUUzgQQE8Veu1N-iW27gheg742HON
 
 **Hardware**: 
+- Arduino UNO
+- Wires
 - 8x8 LED matrix
 - LCD
 - Joystick
 - MAX7219 Driver
 - Potentiometer
-- Wires
-- Arduino UNO
 
 **Features**:
 
@@ -26,7 +26,8 @@
     - Level 4: Speed - fast  |  Space - 3  |  Distance - far
     - Level 5: Speed - very slow  |  Space - 3  |  Distance - tiny
     - Level 6: Speed - slow  |  Space - 3  |  Distance - tiny
-    - Level 7: Speed - slow  |  Space - 3/2  |  Distance - tiny
+    - Level 7: Speed - slow  |  Space - 3/2  |  Distance - tiny  
+    
     (Speed = Bit's speed | Space = space between pipes | Distance = distance between 2 neghbour pipes)
     
 5) Level choose <- can start with any level
