@@ -35,3 +35,4 @@
 7) Animations <- GAME OVER!
 8) Highscore <- highscore and player name saved on EEPROM
 
+![alt text](https://github.com/Mickai55/Introduction-to-Robotics/blob/master/Matrix%20Project/Game%20Picture.jpeg)
