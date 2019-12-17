@@ -34,7 +34,7 @@ bool showOnce = 0;
 
 // matrix variables
 
-int sw = 0;//?????????????????????
+int sw = 0;
 int swName = 1;
 int jump = 0;
 int wallsSpeed = 250;
@@ -60,8 +60,6 @@ long timer3 = 0;
 byte text[9][5]= {G, A, M, E, O, V, E, R, EX};
 int len = sizeof(text) / 5;
 int pos[18]= {-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
-
-//*********************************************************************************
 
 void setup()
 {
