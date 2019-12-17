@@ -11,12 +11,13 @@ Warning: It's hard!
 
 Gameplay: https://drive.google.com/open?id=1pfVTUUzgQQE8Veu1N-iW27gheg742HON
 
-Hardware: - 8x8 LED matrix
-          - LCD
-          - Joystick
-          - MAX7219 Driver
-          - Potentiometer
-          - Wires
-          - Arduino UNO
+Hardware: 
+- 8x8 LED matrix
+- LCD
+- Joystick
+- MAX7219 Driver
+- Potentiometer
+- Wires
+- Arduino UNO
 
 
