@@ -1,6 +1,6 @@
 # INTRODUCTION TO ROBOTICS
 
-I) Small homeworks 
-II) Matrix Project
-III) Final Project
+1) Small homeworks 
+2) Matrix Project
+3) Final Project
 
