@@ -8,15 +8,15 @@
 **Video**: https://www.youtube.com/watch?v=vEio7vrck6M
 
 **Hardware**: 
-- Arduino Nano 
-- zero PCB board 
-- 3mm LED x 8 
-- 220 or 100 ohm Resistor x 8
-- voltage regulator 7805
-- 9V battery
-- basic DC Motor
-- batteries for the motor with carcase
-- wood stand
+- Arduino Nano;
+- zero PCB board; 
+- 3mm LED x 8; 
+- 220 or 100 ohm Resistor x 8;
+- voltage regulator 7805;
+- 9V battery;
+- basic DC Motor;
+- batteries for the motor with carcase;
+- wood stand.
 
 **BOM:** https://docs.google.com/spreadsheets/d/1Htry010sDG5Vxl1XxuDkIDsEU6a6pIBbHVVmY9l-o_E/edit#gid=674253700
 
