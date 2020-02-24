@@ -26,8 +26,8 @@
 3. ENJOY!
 
 **Tutorials used:**
-https://www.youtube.com/watch?v=L2UNBRCbl8I
-https://www.youtube.com/watch?v=geqZdldOz3Y
+- https://www.youtube.com/watch?v=L2UNBRCbl8I
+- https://www.youtube.com/watch?v=geqZdldOz3Y
 
 I made the project work using worse hardware than it's presented in the tutorials. (basic motor with batteries)
 
