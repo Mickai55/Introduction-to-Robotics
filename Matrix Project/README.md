@@ -1,4 +1,4 @@
-***FLAPPY BIT***
+# FLAPPY BIT
 
 **How to play**: Just press the button fast and avoid the pipes! Go as far as you can!  
 ***Warning!!!***: It's hard!
