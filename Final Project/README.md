@@ -1,4 +1,4 @@
-***ARDUINO POV DISPLAY***
+# ARDUINO POV DISPLAY
 
 **Video**: https://www.youtube.com/watch?v=vEio7vrck6M
 
@@ -11,6 +11,10 @@
 5. voltage regulator 7805
 6. 9V battery
 
-**Features**:
+**Images
 
-![alt text](https://github.com/Mickai55/Introduction-to-Robotics/blob/master/Matrix%20Project/Game%20Picture.jpeg)
+![alt text](https://github.com/Mickai55/Introduction-to-Robotics/blob/master/Final%20Project/picture%201.jpg)
+![alt text](https://github.com/Mickai55/Introduction-to-Robotics/blob/master/Final%20Project/picture%202.jpg)
+
+
+**Features**:
