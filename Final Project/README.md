@@ -21,9 +21,10 @@
 **BOM:** https://docs.google.com/spreadsheets/d/1Htry010sDG5Vxl1XxuDkIDsEU6a6pIBbHVVmY9l-o_E/edit#gid=674253700
 
 **How to play**:
-1. Turn ON the switch from the board;
-2. Turn ON the switch from the side.
-3. ENJOY!
+1. Upload the code on the Arduino;
+2. Turn ON the switch from the board;
+3. Turn ON the switch from the side;
+4. ENJOY!
 
 **Tutorials used:**
 - https://www.youtube.com/watch?v=L2UNBRCbl8I
