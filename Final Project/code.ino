@@ -69,7 +69,7 @@ void printLetter(int letter[])
     }
     delay(dotTime);
 // printing the third y row of the letter
-//(SExperiments)
+
     for (y=0; y<8; y++)
     {
         digitalWrite(y+2, letter[y+16]);
@@ -93,7 +93,7 @@ void printLetter(int letter[])
     }
     delay(letterSpace);
 }
-void loop()//write here =)
+void loop()
 {
     printLetter (R);
     printLetter (O);
