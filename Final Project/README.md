@@ -1,5 +1,10 @@
 # ARDUINO POV DISPLAY
 
+![alt text](https://github.com/Mickai55/Introduction-to-Robotics/blob/master/Final%20Project/picture%201.jpg)
+![alt text](https://github.com/Mickai55/Introduction-to-Robotics/blob/master/Final%20Project/picture%202.jpg)
+![alt text](https://github.com/Mickai55/Introduction-to-Robotics/blob/master/Final%20Project/picture%203.jpg)
+
+
 **Video**: https://www.youtube.com/watch?v=vEio7vrck6M
 
 **Hardware**: 
@@ -14,10 +19,6 @@
 - wood stand
 
 **BOM:** https://docs.google.com/spreadsheets/d/1Htry010sDG5Vxl1XxuDkIDsEU6a6pIBbHVVmY9l-o_E/edit#gid=674253700
-
-**Images:**
-![alt text](https://github.com/Mickai55/Introduction-to-Robotics/blob/master/Final%20Project/picture%201.jpg)
-![alt text](https://github.com/Mickai55/Introduction-to-Robotics/blob/master/Final%20Project/picture%202.jpg)
 
 **How to play**:
 1. Turn ON the switch from the board;
