@@ -3,7 +3,7 @@
 **How to play**: Just press the button fast and avoid the pipes! Go as far as you can!  
 ***Warning!!!***: It's hard!
 
-**Gameplay**: https://drive.google.com/open?id=1pfVTUUzgQQE8Veu1N-iW27gheg742HON
+**Gameplay**: https://www.youtube.com/watch?v=yjZTo2Qcby8
 
 **Hardware**: 
 - Arduino UNO
