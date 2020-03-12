@@ -28,7 +28,7 @@
     - Level 6: Speed - slow  |  Space - 3  |  Distance - tiny
     - Level 7: Speed - slow  |  Space - 3/2  |  Distance - tiny  
     
-    (Speed = Bit's speed | Space = space between pipes | Distance = distance between 2 neghbour pipes)
+    (Speed = Bit's speed | Space = space between pipes | Distance = distance between 2 neighbour pipes)
     
 5) Level choose <- can start with any level
 6) Name <- name can be introduced via Arduino's Serial.read()
